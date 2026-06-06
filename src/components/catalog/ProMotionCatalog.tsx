@@ -46,11 +46,6 @@ const LAB: Record<string, LabLink> = {
     url: "https://archeon-lab.vercel.app/objet",
     cta: "OBJET で実物を見る",
   },
-  "text-path": {
-    kicker: "LITHOS · KINETIC TYPE",
-    url: "https://archeon-lab.vercel.app/lithos",
-    cta: "LITHOS で実物を見る",
-  },
 };
 
 // 実演もリンクもしない＝情報カードに出す外部リファレンス
@@ -100,6 +95,15 @@ const INFO: Record<string, ToolRef> = {
       {
         label: "Web Audio API",
         url: "https://developer.mozilla.org/ja/docs/Web/API/Web_Audio_API",
+      },
+    ],
+  },
+  "text-path": {
+    blurb: "文字を曲線（パス）に沿わせて流す。SVG の textPath で実装し、装飾的な見出しやロゴ周りに使います。",
+    links: [
+      {
+        label: "MDN",
+        url: "https://developer.mozilla.org/ja/docs/Web/SVG/Element/textPath",
       },
     ],
   },
@@ -300,7 +304,7 @@ export default function ProMotionCatalog() {
       <footer className="mx-auto mt-10 max-w-6xl px-6 md:px-10">
         <div className="border-t border-line pt-8 text-[0.72rem] leading-relaxed text-ink-muted">
           Archeon 技術ラボ — 上級モーション{PRO_TOTAL}手法カタログ。新規実演は手法の学習用に自社実装（他社コード・資産は非複製）。
-          重い3D・物理は本番のラボ実物（REVEAL / OBJET / LITHOS）で確かめられます。
+          重い3D・物理は本番のラボ実物（REVEAL / OBJET）で確かめられます。
           <br />
           演出名の「言葉」をコピーして制作依頼に貼れば、その動きをそのまま発注できます。
           <Link href="/catalog" className="ml-1 text-accent hover:underline">

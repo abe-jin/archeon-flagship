@@ -8,7 +8,7 @@ import {
   CatalogProgress,
 } from "@/components/catalog/shared";
 
-/* ---- ヒーロー：キネティックな見出し（lithos の質感を踏襲） ---- */
+/* ---- ヒーロー：キネティックな見出し ---- */
 function Hero() {
   const line = "削る・太る・せり上がる";
   return (

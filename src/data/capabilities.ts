@@ -25,7 +25,7 @@ export const capabilities: Capability[] = [
     id: "cap-motion",
     title: "モーション・キネティックタイポグラフィ",
     desc: "スクロールやマウスに反応する動きを、意味のある演出として設計します。巨大文字のピン留め・スケール、文字が現像されるマスク表現、慣性スクロール、光のスイープなど、GSAP と Lenis を使った緻密なモーション設計が可能です。",
-    proofWorkIds: ["lithos", "aurum", "reveal"],
+    proofWorkIds: ["aurum", "reveal"],
     tech: ["GSAP", "ScrollTrigger", "Lenis"],
   },
   {

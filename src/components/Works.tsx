@@ -15,7 +15,7 @@ const ORDER = [
   "rice-shop-corporate", "clinic-demo", "wp-corporate-demo", "fortia-gym-lp", // 実需：コーポレート/LP
   "premium-brand", "aurum", "cosmetics-gekka",                 // ブランド（実需と技術の橋渡し）
   "toinavi",                                                   // アプリ
-  "objet", "lithos",                                           // 3D技術群（ダメ押し）
+  "objet",                                                     // 3D技術群（ダメ押し）
 ];
 
 type TabKey = "all" | "3d" | "corp" | "brand" | "app";

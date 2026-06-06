@@ -96,17 +96,6 @@ export const works: Work[] = [
     note: "デモ制作（架空・伏字）",
   },
   {
-    id: "lithos",
-    title: "LITHOS（キネティックタイポ実験）",
-    category: "インタラクティブ・タイポグラフィ",
-    blurb:
-      "ブランドマニフェストを題材にしたキネティックタイポグラフィの実験。GSAP ScrollTrigger でスクロールに合わせて巨大な文字をピン留め・スケールさせ、ScrambleText とマスクで文字が現像される演出を実装。",
-    stack: ["Next.js", "React", "TypeScript", "GSAP"],
-    thumbnail: "/works/lithos.png",
-    url: "https://archeon-lab.vercel.app/lithos",
-    note: "自社技術デモ（ラボ・架空）",
-  },
-  {
     id: "reveal",
     title: "REVEAL（時計機構のシネマティック分解ツアー）",
     category: "3D・インタラクティブ",
