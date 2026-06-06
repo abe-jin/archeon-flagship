@@ -1,0 +1,240 @@
+/* 動きの辞書 — Cinematic Dark の"劇場"。globals.css に触れず、ここに隔離。
+   方向: design-sense=Cinematic Dark / ui-ux-pro-max=Motion-Driven。
+   near-black の暗闇の中で、各モーションカード(.motion-catalog=light)が
+   「光るスクリーン」として浮かぶ（Active Theory / Lusion 系）。 */
+
+@import url("https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Space+Mono:wght@400;700&display=swap");
+
+.theater {
+  position: relative;
+  isolation: isolate;
+  background: #0b0c0e; /* near-black（純黒より少し温かい） */
+  color: #c9c9c3;
+  overflow: hidden;
+}
+
+/* 紙 → 暗転 → 紙 の dissolve（劇場の照明が落ちる/戻る） */
+.theater::before,
+.theater::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 150px;
+  pointer-events: none;
+  z-index: 1;
+}
+.theater::before {
+  top: 0;
+  background: linear-gradient(180deg, #faf9f6 0%, rgba(11, 12, 14, 0) 100%);
+}
+.theater::after {
+  bottom: 0;
+  background: linear-gradient(0deg, #faf9f6 0%, rgba(11, 12, 14, 0) 100%);
+}
+
+/* one-wow の照明：中央上部の控えめな単一 cyan グロー（purple は使わない） */
+.glow {
+  position: absolute;
+  top: -8%;
+  left: 50%;
+  width: min(960px, 92%);
+  height: 540px;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(34, 211, 238, 0.1) 0%,
+    rgba(34, 211, 238, 0) 65%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.inner {
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  font-family: "Syncopate", sans-serif;
+  font-weight: 700;
+  font-size: 0.62rem;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: #5fd6e6;
+}
+
+.title {
+  margin-top: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.04;
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  color: #f4f2ec;
+}
+
+.lead {
+  margin-top: 1.6rem;
+  max-width: 40rem;
+  font-size: 0.95rem;
+  line-height: 1.95;
+  color: #9a9a94;
+}
+.lead strong {
+  color: #f4f2ec;
+  font-weight: 600;
+}
+
+/* 光るスクリーン群：内側は .motion-catalog(light)。暗闇でカードを発光させる。
+   .motion-catalog の bg(紙地) と min-height:100vh をこのスコープで打ち消す。 */
+.screens {
+  margin-top: 3rem;
+  background: transparent !important;
+  min-height: 0 !important;
+}
+.screens :global(.tech-card) {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 30px 80px -40px rgba(34, 211, 238, 0.3),
+    0 20px 50px -30px rgba(0, 0, 0, 0.8);
+}
+.screens :global(.tech-card:hover) {
+  box-shadow:
+    0 0 0 1px rgba(34, 211, 238, 0.35),
+    0 36px 90px -36px rgba(34, 211, 238, 0.45);
+}
+
+/* 上級（WebGL / 3D / 物理）— 実例で証明する */
+.advanced {
+  margin-top: 4.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 2.6rem;
+}
+.eyebrowSm {
+  font-family: "Space Mono", monospace;
+  font-size: 0.64rem;
+  letter-spacing: 0.2em;
+  color: #6f8f96;
+}
+.advTitle {
+  margin-top: 0.9rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-size: clamp(1.6rem, 3.4vw, 2.4rem);
+  color: #f4f2ec;
+}
+.advLead {
+  margin-top: 0.8rem;
+  max-width: 34rem;
+  font-size: 0.9rem;
+  line-height: 1.85;
+  color: #9a9a94;
+}
+
+.exGrid {
+  margin-top: 1.8rem;
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 640px) {
+  .exGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.exCard {
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.012));
+  padding: 1.4rem 1.5rem;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+.exCard:hover {
+  border-color: rgba(34, 211, 238, 0.45);
+  transform: translateY(-2px);
+}
+.exKicker {
+  font-family: "Space Mono", monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  color: #5fd6e6;
+}
+.exName {
+  margin-top: 0.5rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #f4f2ec;
+}
+.exDesc {
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: #9a9a94;
+}
+
+.chips {
+  margin-top: 1.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.chip {
+  font-family: "Space Mono", monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  color: #b9b9b2;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  padding: 0.4rem 0.8rem;
+}
+
+.advCtaWrap {
+  margin-top: 2rem;
+}
+.ctaGhost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.86rem;
+  color: #5fd6e6;
+  border: 1px solid rgba(95, 214, 230, 0.5);
+  border-radius: 999px;
+  padding: 0.8rem 1.5rem;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+.ctaGhost:hover {
+  background: rgba(95, 214, 230, 0.1);
+  border-color: rgba(95, 214, 230, 0.9);
+  transform: translateY(-1px);
+}
+
+.ctaWrap {
+  margin-top: 3.4rem;
+  display: flex;
+  justify-content: center;
+}
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #06121a;
+  background: #5fd6e6;
+  border-radius: 999px;
+  padding: 0.95rem 1.8rem;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+.cta:hover {
+  background: #8be6f1;
+  transform: translateY(-1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .exCard:hover,
+  .cta:hover,
+  .ctaGhost:hover {
+    transform: none;
+  }
+}
