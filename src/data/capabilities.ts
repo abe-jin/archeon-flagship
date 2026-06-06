@@ -18,7 +18,7 @@ export const capabilities: Capability[] = [
     id: "cap-3d",
     title: "3D・インタラクティブ（WebGL / React Three Fiber）",
     desc: "Archeon の技術的な強みです。機械式時計のムーブメント（約45点）や物理オブジェを、画像ではなくコードで3D生成し、スクロールに連動して回転・分解・操作できる没入表現まで、一貫して対応します。",
-    proofWorkIds: ["reveal", "objet"],
+    proofWorkIds: ["proofs", "reveal", "objet"],
     tech: ["Three.js", "React Three Fiber", "WebGL", "GLSL"],
   },
   {

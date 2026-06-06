@@ -11,7 +11,7 @@ const MAIL = "mailto:abejin0515@gmail.com?subject=" + encodeURIComponent("Archeo
 // 先頭に最強の見せ場(REVEAL)で掴み、コーポレート/LP/クリニック等の
 // 受注しやすい実需を中盤に、最後に3D技術デモでダメ押しする。
 const ORDER = [
-  "reveal",                                                    // WOW（掴み）
+  "proofs", "reveal",                                          // WOW（掴み）：コード表現＋シネマ3D
   "rice-shop-corporate", "clinic-demo", "wp-corporate-demo", "fortia-gym-lp", // 実需：コーポレート/LP
   "premium-brand", "aurum", "cosmetics-gekka",                 // ブランド（実需と技術の橋渡し）
   "toinavi",                                                   // アプリ

@@ -17,6 +17,17 @@ export interface Work {
  */
 export const works: Work[] = [
   {
+    id: "proofs",
+    title: "PROOFS — コード表現の証明集",
+    category: "3D・インタラクティブ",
+    blurb:
+      "画像を一枚も使わず、コードだけで描く8つの表現実験（レイマーチSDF・反応拡散・流体・GPUパーティクル等）。マウス・スクロール・クリックで動く自社技術ショーケース。",
+    stack: ["WebGL", "GLSL", "Three.js", "Canvas"],
+    thumbnail: "/works/proofs.png",
+    url: "https://archeon-proofs.vercel.app",
+    note: "自社技術ショーケース",
+  },
+  {
     id: "fortia-gym-lp",
     title: "パーソナルジム LP",
     category: "ランディングページ",
