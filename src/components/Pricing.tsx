@@ -1,7 +1,5 @@
 import Reveal from "@/components/Reveal";
 
-const MAIL = "mailto:abejin0515@gmail.com?subject=" + encodeURIComponent("Archeon お見積りのご相談");
-
 const factors = [
   { title: "規模", desc: "ページ数や構成の大きさ。1枚のLPか、複数ページのコーポレートサイトかで変わります。" },
   { title: "機能", desc: "お問い合わせフォーム、ブログ、EC導線、地図・検索、3D演出など。必要なものだけ選べます。" },
@@ -65,7 +63,7 @@ export default function Pricing() {
                 まずは予算感だけでも教えてください。無理のない形を一緒に考えます。
               </p>
               <a
-                href={MAIL}
+                href="#contact"
                 className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-paper transition-all hover:bg-brand-700"
               >
                 無料で見積もりを相談する

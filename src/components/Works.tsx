@@ -5,8 +5,6 @@ import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import { works, type Work } from "@/data/works";
 
-const MAIL = "mailto:abejin0515@gmail.com?subject=" + encodeURIComponent("Archeon 制作のご相談");
-
 // 並び戦略：WOW → 実需 → 3D技術群（会長指示 2026-06-05）。
 // 先頭に最強の見せ場(REVEAL)で掴み、コーポレート/LP/クリニック等の
 // 受注しやすい実需を中盤に、最後に3D技術デモでダメ押しする。
@@ -141,7 +139,7 @@ export default function Works() {
               気になる表現や、近い業種の実績があれば、同じ作り方であなたの事業にも応用できます。
             </p>
             <a
-              href={MAIL}
+              href="#contact"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-paper transition-all hover:bg-brand-700"
             >
               制作を相談する

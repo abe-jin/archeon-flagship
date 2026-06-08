@@ -9,12 +9,6 @@ const FulcrumCanvas = dynamic(() => import("@/components/hero/FulcrumCanvas"), {
   ssr: false,
 });
 
-const MAIL =
-  "mailto:abejin0515@gmail.com?subject=" +
-  encodeURIComponent("Archeon 制作のご相談") +
-  "&body=" +
-  encodeURIComponent("やりたいこと・困っていることを、そのままお書きください。");
-
 function supportsWebGL(): boolean {
   try {
     const c = document.createElement("canvas");
@@ -113,7 +107,7 @@ export default function FulcrumHero() {
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
-                href={MAIL}
+                href="#contact"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-paper transition-all hover:bg-brand-700"
               >
                 メールで相談する（無料）

@@ -12,8 +12,6 @@ const NAV = [
   { href: "#faq", label: "よくある質問" },
 ];
 
-const MAIL = "mailto:abejin0515@gmail.com?subject=" + encodeURIComponent("Archeon 制作のご相談");
-
 export default function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -54,7 +52,7 @@ export default function SiteHeader() {
 
         <div className="hidden lg:block">
           <a
-            href={MAIL}
+            href="#contact"
             className="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-paper transition-all hover:bg-brand-700"
           >
             無料で相談する
@@ -96,7 +94,7 @@ export default function SiteHeader() {
           ))}
           <li className="mt-2">
             <a
-              href={MAIL}
+              href="#contact"
               onClick={() => setOpen(false)}
               className="block rounded-full bg-ink px-5 py-3 text-center text-base font-semibold text-paper"
             >
