@@ -1,10 +1,5 @@
 import Reveal from "@/components/Reveal";
-
-const MAIL =
-  "mailto:abejin0515@gmail.com?subject=" +
-  encodeURIComponent("Archeon 制作のご相談") +
-  "&body=" +
-  encodeURIComponent("やりたいこと・困っていることを、そのままお書きください。");
+import ContactForm from "@/components/ContactForm";
 
 export default function Contact() {
   return (
@@ -28,16 +23,9 @@ export default function Contact() {
                 重いものを動かす支点を、ここから一緒に置きましょう。
               </p>
 
-              <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
-                <a
-                  href={MAIL}
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-paper px-7 py-3.5 text-sm font-semibold text-ink transition-all hover:bg-brand-100"
-                >
-                  メールで相談する
-                  <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
-                    <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </a>
+              <ContactForm />
+
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <a
                   href="https://x.com/Archeon0000"
                   target="_blank"
