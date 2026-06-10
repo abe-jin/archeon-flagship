@@ -10,7 +10,9 @@ import { works, type Work } from "@/data/works";
 // 受注しやすい実需を中盤に、最後に3D技術デモでダメ押しする。
 const ORDER = [
   "proofs", "reveal",                                          // WOW（掴み）：コード表現＋シネマ3D
-  "rice-shop-corporate", "clinic-demo", "wp-corporate-demo", "fortia-gym-lp", // 実需：コーポレート/LP
+  "cafe-komorebi", "clinic-demo", "wp-corporate-demo",         // 実需：店舗/クリニック/コーポレート
+  "money-compass", "giga-navi", "fortia-gym-lp",               // 実需：比較メディア/LP
+  "rice-shop-corporate",                                       // 実需：EC（保護OFF後に復帰）
   "premium-brand", "aurum", "cosmetics-gekka",                 // ブランド（実需と技術の橋渡し）
   "toinavi",                                                   // アプリ
   "objet",                                                     // 3D技術群（ダメ押し）
@@ -21,7 +23,7 @@ type TabKey = "all" | "3d" | "corp" | "brand" | "app";
 const TABS: { key: TabKey; label: string; match: (w: Work) => boolean }[] = [
   { key: "all", label: "すべて", match: () => true },
   { key: "3d", label: "3D・モーション", match: (w) => w.category.includes("3D") || w.category.includes("タイポグラフィ") },
-  { key: "corp", label: "コーポレート・LP", match: (w) => ["コーポレートサイト", "ランディングページ", "クリニックサイト"].includes(w.category) },
+  { key: "corp", label: "コーポレート・LP", match: (w) => ["コーポレートサイト", "ランディングページ", "クリニックサイト", "店舗サイト", "比較メディア"].includes(w.category) },
   { key: "brand", label: "ブランド", match: (w) => w.category === "ブランドサイト" },
   { key: "app", label: "アプリ", match: (w) => w.category === "Webアプリ" },
 ];

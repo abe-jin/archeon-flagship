@@ -139,4 +139,37 @@ export const works: Work[] = [
     url: "https://aurum-demo-liart.vercel.app",
     note: "デモ制作（架空・伏字）",
   },
+  {
+    id: "cafe-komorebi",
+    title: "カフェサイト（木漏れ日）",
+    category: "店舗サイト",
+    blurb:
+      "写真を主役にした、ナチュラルな雰囲気のカフェサイト。メニュー・ギャラリー・店舗情報・問い合わせまでを1ページで構成し、Canvasの光（木漏れ日）演出・スマホ対応・JS無効でも本文が読める設計に対応。",
+    stack: ["HTML5", "CSS", "JavaScript", "Canvas"],
+    thumbnail: "/works/cafe-demo.png",
+    url: "https://cafe-demo.vercel.app",
+    note: "デモ制作（架空・伏字）",
+  },
+  {
+    id: "money-compass",
+    title: "投資・証券の比較メディア",
+    category: "比較メディア",
+    blurb:
+      "ネット証券を横断比較するランキングメディアのデモ。トップ・比較ランキング・記事・3問の口座診断ツールの複数ページ構成。写真を使わずSVG／CSSのみで作図し、金融の表現に配慮した中立的な比較に対応。",
+    stack: ["HTML5", "CSS", "JavaScript", "SVG"],
+    thumbnail: "/works/money-compass.png",
+    url: "https://money-compass-demo.vercel.app",
+    note: "デモ制作（架空・伏字）",
+  },
+  {
+    id: "giga-navi",
+    title: "ネット回線の比較メディア（Bento UI）",
+    category: "比較メディア",
+    blurb:
+      "インターネット回線を比較する、Bento UI のダークなLP／メディアdemo。カード型グリッドで回線ランキング・料金比較表・回線セルフ診断までを構成。写真を使わずCSS／SVGのみで実装し、スマホ対応・JS無効時のフォールバックに対応。",
+    stack: ["HTML5", "CSS", "JavaScript", "SVG"],
+    thumbnail: "/works/giga-navi.png",
+    url: "https://giga-navi-demo.vercel.app",
+    note: "デモ制作（架空・伏字）",
+  },
 ];
